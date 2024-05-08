@@ -243,6 +243,7 @@ console.log(getCheapestMenuItem(menu));
 
 function getMenuItemsByIngredient(menu, ingredient) {
   // Your code here
+  return menu.filter((men) => men.ingredients.includes(ingredient));
 }
 
-// console.log(getMenuItemsByIngredient(menu, "Parmesan"));
+console.log(getMenuItemsByIngredient(menu, "Parmesan"));
