@@ -204,8 +204,16 @@ console.log(listMenuItemNamesByCategory(menu, "Main Course"));
 
 function getCheapestMenuItem(menu) {
   // Your code here
+  let x = menu[0].price;
+  menu.forEach((me) => {
+    if (me.price < x) {
+      return (x = me.price);
+    }
+  });
+  const res = menu.filter((men) => men.price == x);
+  return res;
 }
-// console.log(getCheapestMenuItem(menu));
+console.log(getCheapestMenuItem(menu));
 
 /**********
     Question 7: 🌶️🌶️🌶️
