@@ -176,6 +176,13 @@ console.log(countMainCourseItems(menu));
 
 function listMenuItemNamesByCategory(menu, category) {
   // Your code here
+  const x = [];
+  menu.forEach((me) => {
+    if (me.category == category) {
+      return x.push(me.name);
+    }
+  });
+  return x;
 }
 console.log(listMenuItemNamesByCategory(menu, "Main Course"));
 
